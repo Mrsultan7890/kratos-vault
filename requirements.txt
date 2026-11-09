@@ -1,0 +1,37 @@
+# ── Core UI ────────────────────────────────────────────────────────────
+PyQt6>=6.4.0
+
+# ── Core vault / crypto / graph ────────────────────────────────────────
+cryptography>=41.0.0
+sqlcipher3-binary>=0.6.0
+Pillow>=10.0.0
+networkx>=3.0
+matplotlib>=3.7.0
+exifread>=3.0.0
+
+# ── Enrichers (HTTP / scraping / lookups) ──────────────────────────────
+requests>=2.31.0
+httpx>=0.24.0
+phonenumbers>=8.12.0
+selenium>=4.10.0
+python-whois>=0.8.0
+dnspython>=2.4.0
+pysocks>=1.7.1        # only needed if you set KV_PROXY=socks5h://... (Tor)
+
+# ── Document parsers ───────────────────────────────────────────────────
+pymupdf>=1.23.0
+python-docx>=1.1.0
+openpyxl>=3.1.0
+
+# ── ML engines ─────────────────────────────────────────────────────────
+numpy>=1.24.0
+scikit-learn>=1.2.0
+spacy>=3.5.0          # + python -m spacy download en_core_web_sm
+sentence-transformers>=2.2.0   # heavy: pulls torch
+ultralytics>=8.0.0    # YOLOv8 — heavy: pulls torch
+xgboost>=1.7.0
+
+# ── External (not pip) ─────────────────────────────────────────────────
+# GHunt: expected at /home/kali/Tools-inv/GHunt (override with GHUNT_PATH
+# env var). Used by email_enricher for Google-account OSINT.
+# YOLO weights auto-download to ~/.kratos_vault/yolov8n.pt on first use.
